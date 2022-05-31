@@ -1,18 +1,27 @@
 package com.generation.f20220531;
 
+import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		
+		// arreglo de clientes
+		List<Cliente> listaCliente =new  ArrayList<Cliente>();
+		int opcion = 0;
+		
 		// instancia de cliente
 		Cliente cliente = new Cliente();
 		cliente.setId(1234);
 		cliente.setNombre("Donato");
 		cliente.setRut("123456789-0");
-
+		
+		
+		do {
 		// excepciones
 		Cliente clienteDatosDinamicos = new Cliente();
 
@@ -38,8 +47,8 @@ public class Main {
 			String correo = sc.nextLine();
 			clienteDatosDinamicos.setCorreo(correo);
 			
-			Integer division = 100/0;
-			System.out.println(division);
+			//Integer division = 100/0;
+			//System.out.println(division);
 			
 		}catch(ArithmeticException ae) {
 			System.out.println("Error al dividir por cero");
@@ -54,7 +63,12 @@ public class Main {
 			System.out.println("Ha ocurrido un error, contecte al administrador " + e);
 		}
 
-		// arreglo de clientes
+		System.out.println("Desea ingresar un nuevo cliente? (1) si (0) no");
+		opcion = sc.nextInt();
+		sc.nextLine();
+		
+		}while(opcion == 1);
+
 
 	}
 
