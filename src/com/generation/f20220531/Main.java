@@ -21,8 +21,8 @@ public class Main {
 		String idString = sc.nextLine();
 
 		try {
-			Integer id = null;//Integer.parseInt(idString);
-			clienteDatosDinamicos.setId(id+1);
+			Integer id = Integer.parseInt(idString);//null para probar el error
+			clienteDatosDinamicos.setId(id);//id +1 para probar error
 			sc.nextLine();
 
 			System.out.println("Ingrese el nombre de Cliente");
@@ -37,6 +37,13 @@ public class Main {
 			System.out.println("Ingrese el correo de Cliente");
 			String correo = sc.nextLine();
 			clienteDatosDinamicos.setCorreo(correo);
+			
+			Integer division = 100/0;
+			System.out.println(division);
+			
+		}catch(ArithmeticException ae) {
+			System.out.println("Error al dividir por cero");
+			
 		} catch(NullPointerException npe) {
 			System.out.println("No se puede realizar la operacion matematica, un dato es nulo");
 		} catch (InputMismatchException ime) {
