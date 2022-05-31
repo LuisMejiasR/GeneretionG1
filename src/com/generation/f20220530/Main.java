@@ -3,6 +3,8 @@ package com.generation.f20220530;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.generation.f20220531.Cliente;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -39,7 +41,11 @@ public class Main {
 			System.out.println(objetoAlumno.getCurso());*/
 			System.out.println(objetoAlumno.toString());
 		}
-
+		
+		Cliente cliente = new Cliente();
+		cliente.setNombre("Ignacio");//asigno
+		//get. consultar el dato
+		System.out.println(cliente.getNombre());
 	}
 
 }
