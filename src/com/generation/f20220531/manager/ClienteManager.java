@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.generation.f20220531.Cliente;
 
+//logica de negocio
 public class ClienteManager {
 	
 	//recorrer el arreglo e imprimir
